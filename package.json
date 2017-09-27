@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "npm run clean-build-steps && rm -rf dist",
     "babel": "./node_modules/.bin/babel src --out-dir build-babel --source-maps",
-    "webpack": "webpack && cp public/* dist -r",
+    "webpack": "./node_modules/.bin/webpack && cp public/* dist -r",
     "clean-build-steps": "rm -rf build-babel",
     "build": "npm run clean && npm run babel && npm run webpack && npm run clean-build-steps"
   },
